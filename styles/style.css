@@ -1,10 +1,6 @@
 
 .page {
   background-color: var(--bg-color);
-  background-image: var(--bg-image);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
   color: var(--main-text-color);
   font-family: var(--main-font), monospace;
   margin: 0;
@@ -28,18 +24,19 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 0;
   width: 25px;
   height: 25px;
   border-bottom: 1px solid var(--accent-color);
   border-left: 1px solid var(--accent-color);
+  margin-left: 10px;
 }
 
 .title-decor {
   color: var(--bg-color);
   background-color: var(--accent-color);
-  font-weight: 700;
+  font-weight: 700; 
 }
 
 .header {
@@ -51,6 +48,10 @@
   height: 100vh;
   height: 100dvh;
   position: relative;
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header__rec {
@@ -183,19 +184,6 @@
   flex-direction: column;
 }
 
-/* .content__link {
-  font-family: inherit;
-  font-weight: 400;
-  color: var(--accent-color);
-  text-decoration: none;
-  text-shadow: 2px 1px 0 var(--accent-color);
-}
-
-.content__link:hover {
-  border-bottom: 1px solid currentColor;
-} */
-
-/* Базовый стиль для ссылок в текстах статей */
 .content__link {
   color: var(--main-text-color); 
   font-family: inherit;
@@ -219,4 +207,34 @@
 
 .section-thin-titles {
   font-weight: 400;
+}
+
+.gallery-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery {
+  display: grid;
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery img:nth-child(1) {
+  aspect-ratio: 355 / 142;
+}
+
+.gallery img:nth-child(2),
+.gallery img:nth-child(4) {
+  aspect-ratio: 1 / 1;
+}
+
+.gallery img:nth-child(3),
+.gallery img:nth-child(5) {
+  aspect-ratio: 355 / 237;
 }

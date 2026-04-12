@@ -40,16 +40,3 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
-
-.page {
-  font-family: var(--main-font), monospace;
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  background-image: var(--bg-image);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  margin: 0;
-  min-inline-size: 320px;
-  min-block-size: 100vh;
-}
