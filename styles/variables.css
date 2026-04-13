@@ -1,15 +1,15 @@
 :root {
-  --main-font: "IBM Plex Mono", monospace;
-  --bg-color: #000028;
+  --main-font: 'IBM Plex Mono', monospace;
+  --bg-color: rgb(0 0 40 / 1);
   --accent-color: #ff0070;
-  --title-color: #DB00FF;
-  --main-text-color: rgba(241, 178, 206, 1);
-
-  --bg-image: url('../images/cover-image-dark.png');
+  --title-color: #db00ff;
+  --main-text-color: rgb(241 178 206 / 1);
+  --bg-image: url(../images/cover-image-dark.png);
   --header-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 
 @media (min-width: 768px) {
+
   :root {
     --header-title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
