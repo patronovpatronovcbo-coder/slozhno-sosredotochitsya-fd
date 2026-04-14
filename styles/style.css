@@ -5,7 +5,8 @@
   background-attachment: fixed;
   color: var(--title-text-color);
   font-family: var(--main-font), monospace;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1024px;
 }
 
 .decorated-zone {
@@ -36,7 +37,7 @@
 }
 
 .title-decor {
-  color: var(--bg-color);
+  color: var(--text-main);
   background-color: var(--accent-color);
   font-weight: 700;
 }
@@ -127,13 +128,13 @@
   align-self: center;
   font-family: var(--main-font), monospace;
   font-weight: 700;
-  font-size: var(--header-title-size);
+  font-size: var(--main-title-size);
   line-height: 82.5%;
   color: var(--title-color);
   text-shadow: 4px 4px 0 var(--accent-color);
   inline-size: min-content;
-  width: 355px;
-  height: 192px;
+  min-width: 355px;
+  width:100%
 }
 
 .header__description {
@@ -147,11 +148,10 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 23px;
-  color: var(--bg-color);
+  color: var(--color-text-main);
   background-color: var(--accent-color);
   padding: 0;
   width: 355px;
-  min-height: 117px;
   height: auto;
   letter-spacing: 0%;
 }
@@ -192,6 +192,8 @@
   letter-spacing: 0%;
 }
 
+
+
 .content__link {
   color: var(--main-text-color);
   font-family: inherit;
@@ -212,6 +214,7 @@
   outline: 1px solid var(--main-text-color);
   outline-offset: 1px;
 }
+
 
 .section-thin-titles {
   font-weight: 400;
@@ -263,7 +266,7 @@
 .footer__title {
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 700;
-  font-size: var(--header-title-size);
+  font-size: var(--main-title-size);
   line-height: 82.5%;
   color: var(--title-color);
   text-shadow: 2px 2px 0 var(--accent-color);
@@ -278,13 +281,16 @@
   margin-top: 20px;
 }
 
+.content__card-text p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
 @media (min-width: 768px) {
 
   .header {
     padding: 20px;
     grid-template-rows: 1fr min-content 1fr;
     min-height: 1024px;
-    height: 100vh;
   }
 
   .decorated-zone::before {
@@ -317,9 +323,8 @@
 
   .header__title {
     width: 100%;
-    max-width: 576px;
     height: auto;
-    font-size: 120px;
+    font-size: var(--main-title-size);
     line-height: 82.5%;
     margin-left: -20px;
     justify-self: start;
@@ -334,7 +339,7 @@
 
   .header__description-text {
     width: 100%;
-    min-height: 117px;
+    min-height: auto;
   }
 
   .content {
@@ -347,7 +352,6 @@
     grid-template-columns: 236px 1fr;
     column-gap: 20px;
     width: 100%;
-    max-width: 768px;
   }
 
   .content__section-title {
@@ -356,6 +360,10 @@
     min-height: 71px;
     margin: 0;
   }
+
+  .section-subtitle {
+   margin-top: 20px;
+}
 
   .content__section-list {
     grid-column: 2;
@@ -383,36 +391,23 @@
     gap: 20px;
   }
 
-  .content__section:nth-of-type(2) {
+  .content__section--cards {
     display: flex;
     flex-direction: column;
   }
 
-  .content__section:nth-of-type(2) .content__section-title {
+  .content__section--cards .content__section-title {
     grid-column: 1;
     width: 236px;
     min-height: 41px;
     margin-bottom: 20px;
   }
 
-  .content__section:nth-of-type(2) .content__section-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .content__section:nth-of-type(2) .content__card-title,
-  .content__section:nth-of-type(2) .content__card-text {
+  .content__section--cards .content__card-title,
+  .content__section--cards .content__card-text {
     width: 100%;
     max-width: 100%;
     min-height: auto;
-  }
-
-  .content__section:nth-of-type(3)
-    .content__card:first-child
-    .content__card-title:nth-of-type(2) {
-    margin-top: 20px;
   }
 
   .gallery-block {
@@ -429,6 +424,10 @@
     max-width: 100%;
     margin-bottom: 20px;
   }
+
+  .content__card-title + .content__card-title {
+    margin-top: 20px;
+}
 
   .gallery {
     display: grid;
@@ -461,11 +460,7 @@
     grid-area: street;
   }
 
-  .gallery img:nth-child(1),
-  .gallery img:nth-child(2),
-  .gallery img:nth-child(3),
-  .gallery img:nth-child(4),
-  .gallery img:nth-child(5) {
+  .gallery img {
     aspect-ratio: auto;
     width: 100%;
     height: 100%;
@@ -529,7 +524,7 @@
   .header__description-text {
     display: block;
     width: 100%;
-    min-height: 71px;
+    min-height: auto;
   }
 
   .content__section {
@@ -537,7 +532,6 @@
     grid-template-columns: 314px 1fr;
     column-gap: 20px;
     width: 100%;
-    max-width: 1024px;
   }
 
   .content__section-title {
@@ -556,17 +550,16 @@
     min-height: 211px;
   }
 
-  .content__section:nth-of-type(2) {
+  .content__section--cards {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
     width: 100%;
-    max-width: 1024px;
     margin: 0 auto;
   }
 
-  .content__section:nth-of-type(2) .content__section-title {
+  .content__section--cards .content__section-title {
     width: 100%;
     max-width: 315px;
     margin: 0;
@@ -574,14 +567,14 @@
     height: 47px;
   }
 
-  .content__section:nth-of-type(2) .content__section-list {
+  .content__section--cards .content__section-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     width: 100%;
   }
 
-  .content__section:nth-of-type(2) .content__card {
+  .content__section--cards .content__card {
     width: 100%;
     min-height: 384px;
     display: flex;
@@ -601,23 +594,23 @@
     align-items: start;
   }
 
-  .content__section:nth-of-type(3) .content__section-list {
+  .content__section--tips .content__section-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-  .content__section:nth-of-type(3) .content__card-title,
-  .content__section:nth-of-type(3) .content__card-text {
+  .content__section--tips .content__card-title,
+  .content__section--tips .content__card-text {
     max-width: none;
     width: 100%;
   }
 
-  .content__section:nth-of-type(3) .content__card-text {
+  .content__section--tips .content__card-text {
     min-height: auto;
   }
 
-  .content__section:nth-of-type(2) {
+  .content__section--cards {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -626,7 +619,6 @@
   .footer {
     width: 100%;
     min-height: 768px;
-    height: 768px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -636,9 +628,13 @@
   }
 
   .footer__title {
-    font-size: var(--header-title-size);
+    font-size: var(--main-title-size);
     line-height: 82.5%;
     text-align: center;
     margin: 0;
+  }
+
+  .header__description-text br {
+    display: none;
   }
 }
