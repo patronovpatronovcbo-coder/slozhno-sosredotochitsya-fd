@@ -1,7 +1,7 @@
 :root.theme-light {
   --bg-image: url(../images/cover-image-light.png);
   --bg-color: rgb(255 241 247 / 1);
-  --main-text-color: rgb(53, 51, 48);
+  --main-text-color: rgb(53 51 48);
   --accent-color: rgb(255 141 203 / 1);
   --title-color: rgb(255 194 230 / 1);
   --color-text-main: rgb(53 52 48 / 1);
@@ -41,5 +41,3 @@
 .theme-light .content__section-title {
   color: var(--main-text-color);
 }
-
-

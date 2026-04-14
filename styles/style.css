@@ -134,7 +134,7 @@
   text-shadow: 4px 4px 0 var(--accent-color);
   inline-size: min-content;
   min-width: 355px;
-  width:100%
+  width: 100%;
 }
 
 .header__description {
@@ -192,8 +192,6 @@
   letter-spacing: 0%;
 }
 
-
-
 .content__link {
   color: var(--main-text-color);
   font-family: inherit;
@@ -214,7 +212,6 @@
   outline: 1px solid var(--main-text-color);
   outline-offset: 1px;
 }
-
 
 .section-thin-titles {
   font-weight: 400;
@@ -362,8 +359,8 @@
   }
 
   .section-subtitle {
-   margin-top: 20px;
-}
+    margin-top: 20px;
+  }
 
   .content__section-list {
     grid-column: 2;
@@ -427,7 +424,7 @@
 
   .content__card-title + .content__card-title {
     margin-top: 20px;
-}
+  }
 
   .gallery {
     display: grid;
