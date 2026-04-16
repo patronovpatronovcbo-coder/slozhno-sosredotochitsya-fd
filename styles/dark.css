@@ -1,17 +1,8 @@
 :root.theme-dark {
-  --bg-color: #000028;
-  --accent-color: #ff0070;
-  --title-color: #db00ff;
-  --main-text-color: rgb(241 178 206 / 1);
-  --color-text-main: #000028;
-  --text-main: #000028;
-}
-
-.theme-dark .header__rec {
-  color: var(--accent-color);
-}
-
-.theme-dark .header__rec::after {
-  background-color: var(--accent-color);
-  box-shadow: 0 0 4px 2px var(--accent-color);
+  --rec-display: block;
+  --decor-color: var(--accent-color);
+  --button-color: var(--accent-color);
+  --button-hover-color: rgb(255 0 112 / 0.4);
+  --button-active-border: var(--accent-color);
+  --section-title-color: var(--accent-color);
 }

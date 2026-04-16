@@ -8,47 +8,18 @@
   --main-title-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --text-main: #000028;
   --color-text-main: #000028;
+  --rec-display: block;
+  --decor-color: var(--accent-color);
+  --button-color: var(--accent-color);
+  --button-hover-color: rgb(255 0 112 / 0.4);
+  --button-active-border: var(--accent-color);
+  --section-title-color: var(--accent-color);
+  --text-color: rgb(241 178 206 / 1);
 }
 
 @media (min-width: 768px) {
 
   :root {
     --main-title-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-
-  :root:has(
-    .header__theme-menu-button_type_auto.header__theme-menu-button_active
-  ) {
-    --bg-image: url(../images/cover-image-light.png);
-    --bg-color: rgb(255 241 247 / 1);
-    --main-text-color: rgb(53 52 48 / 1);
-    --accent-color: rgb(255 141 203 / 1);
-    --title-color: rgb(255 194 230 / 1);
-    --color-text-main: rgb(53 52 48 / 1);
-    --text-main: rgb(53 52 48 / 1);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-
-  :root:has(
-      .header__theme-menu-button_type_auto.header__theme-menu-button_active
-    )
-    .header__rec {
-    display: none;
-  }
-
-  :root:has(
-      .header__theme-menu-button_type_auto.header__theme-menu-button_active
-    )
-    .decorated-zone::before,
-  :root:has(
-      .header__theme-menu-button_type_auto.header__theme-menu-button_active
-    )
-    .decorated-zone::after {
-    border-color: var(--main-text-color);
   }
 }
